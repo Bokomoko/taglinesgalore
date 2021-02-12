@@ -22,11 +22,10 @@ app.config["DEBUG"] = True
 
 @app.route('/', methods=['GET'])
 def home():
-
     # Get one random document from the tagline collection.
     wresponse = (list(db.taglines.aggregate(
         [{"$sample": {"size": 1}}]))[0]['0'])
-    return to http request with Status 200 (ok)
+    # return to http request with Status 200 (ok)
     return (wresponse, 200)
 
 
